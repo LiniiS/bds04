@@ -119,7 +119,9 @@ public class CityControllerIT {
 		result.andExpect(jsonPath("$.errors[0].fieldName").value("name"));
 		result.andExpect(jsonPath("$.errors[0].message").value("Campo requerido"));
 	}
-
+	
+	
+	//público, findAll ordenando por nome, não pageable
 	@Test
 	public void findAllShouldReturnAllResourcesSortedByName() throws Exception {
 		
